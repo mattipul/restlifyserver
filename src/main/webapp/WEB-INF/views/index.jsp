@@ -74,7 +74,7 @@
                 <ul id="nav">
 
 
-                    <li><a href="/otayhteytta">Aloita vaikka heti!</a></li>
+                    <li><a href="/otayhteytta">Ota yhteyttä!</a></li>
 
                 </ul>
 
@@ -248,7 +248,7 @@
 
                         <div class="space"></div>
 
-                        <a href="/otayhteytta" class="button-blue">Aloita vaikka heti!</a> 
+                        <a href="/otayhteytta" class="button-blue">Ota yhteyttä!</a> 
 
                     </div>
 
