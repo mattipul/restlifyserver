@@ -202,9 +202,7 @@
 
                         <p>Ajatuksena on se, että jokainen prosessi ja toimenpide jaetaan työvaiheisiin, joita käydään järjestelmällisesti läpi - yksi kerrallaan. Näistä työvaihelistoista koostetaan interaktiivinen ja ominaisuuksiltaan rikas, digitaalinen tarkastuslista, jonka avulla työntekijät voivat ilmoittaa työnjohdolle ja muille tahoille mahdollisista virheistä ja/tai ongelmista.</p>
                         <div class="space"></div>
-                        <p>Ja koska kyseessä on pilvipalvelu, Laatua pitää huolen kaikista ylläpidollisista asioista. Niin tietoturvasta, kuluvalvonnasta kuin ongelmanratkonnastakin. Asiakas voi itse päättää, minkälaisia ominaisuuksia tilattavaan palveluun liitetään. Ja, luonnollisesti, palvelua voi käyttää missä tahansa ja lähes millä tahansa laitteella!</p>
-
-
+                        
                     </div>
 
                     <!-- Image from right --> 
@@ -212,7 +210,6 @@
                     <div class="five columns picture make-it-appear-right animated fadeInRight">
 
                         <img src="/info.jpg" alt="EXEMPLE">
-
                     </div>
 
                 </div> <!-- End row div -->    
@@ -237,17 +234,9 @@
 
                         <!-- Title --> 
 
-
-                        <!-- Content --> 
-
-                        <h4>Pienyritykset: 30€/kk</h4>					
-
-                        <h4>Keskisuuret yritykset: 100€/kk</h4>
-
-                        <h4>Suuret yritykset: 500€/kk</h4>
-
+                                                <!-- Content --> 
+                        <p>Ja koska kyseessä on pilvipalvelu, Laatua pitää huolen kaikista ylläpidollisista asioista. Niin tietoturvasta, kuluvalvonnasta kuin ongelmanratkonnastakin. Asiakas voi itse päättää, minkälaisia ominaisuuksia tilattavaan palveluun liitetään. Ja, luonnollisesti, palvelua voi käyttää missä tahansa ja lähes millä tahansa laitteella! Hinta määräytyy käytön mukaan.</p>
                         <div class="space"></div>
-
                         <a href="/otayhteytta" class="button-blue">Ota yhteyttä!</a> 
 
                     </div>
