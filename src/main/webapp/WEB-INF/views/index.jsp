@@ -203,7 +203,6 @@
                         <p>Ajatuksena on se, että jokainen prosessi ja toimenpide jaetaan työvaiheisiin, joita käydään järjestelmällisesti läpi - yksi kerrallaan. Näistä työvaihelistoista koostetaan interaktiivinen ja ominaisuuksiltaan rikas, digitaalinen tarkastuslista, jonka avulla työntekijät voivat ilmoittaa työnjohdolle ja muille tahoille mahdollisista virheistä ja/tai ongelmista.</p>
                         <div class="space"></div>
 
-                        <a href="/laatua_infografiikkaa.jpg" class="button-blue">Infografiikkaa</a> 
 
 
                     </div>
@@ -212,7 +211,7 @@
 
                     <div class="five columns picture make-it-appear-right animated fadeInRight">
 
-                        <img src="/laatua_files/2.png" alt="EXEMPLE">
+                        <img src="/info.jpg" alt="EXEMPLE">
 
                     </div>
 
@@ -221,6 +220,7 @@
             </section>
 
             <!-- END FOURTH SECTION ############################################### -->
+
 
 
             <!-- FIFTH SECTION ############################################### -->
