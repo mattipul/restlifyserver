@@ -17,10 +17,10 @@
         <!-- Meta tags & title /-->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Laatua - Laadun- ja työnvalvontaa - pilvipalveluna</title>
-        <meta name="description" content="This template is an easy to use app landing page, responsive and pretty easy to customize including some great easing effects, modal window, a sticky header with share buttons &amp; others stuff !">
-        <meta name="keywords" content="Free, template, easy to use, customise, one page, template, simple, minimal, landing page, app page, supview">
-        <meta name="author" content="Supview - François Martin">
+        <title>Laatua - Laadun ja työn valvontaa - pilvipalveluna</title>
+        <meta name="description" content="Laadun ja työn valvontaa - pilvipalveluna!">
+        <meta name="keywords" content="laatu, työ, valvonta, pilvi, saas, mobiili, puhelin, data, big data, informaatio, yritys, palvelu, pilvipalvelu, hallinta">
+        <meta name="author" content="Laatua.net">
         <link rel="shortcut icon" href="/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -97,7 +97,7 @@
 
                 <div class="logo-phone centered"><a href="#"><img alt="Logo" src="laatua_files/logo.png"></a></div>  <!-- This Logo is only displayed on Tablet/iPhone !-->  
                 <h5>laatua</h5>
-                <h1>Laadun- ja työnvalvontaa - pilvipalveluna</h1>
+                <h1>Laadun ja työn valvontaa - pilvipalveluna</h1>
                 <h2>Elegantti tapa seurata, hallita ja raportoida ongelmia.</h2>
 
                 <div class="space"></div>
