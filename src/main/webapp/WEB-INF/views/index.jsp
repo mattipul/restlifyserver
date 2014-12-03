@@ -202,7 +202,7 @@
 
                         <p>Ajatuksena on se, että jokainen prosessi ja toimenpide jaetaan työvaiheisiin, joita käydään järjestelmällisesti läpi - yksi kerrallaan. Näistä työvaihelistoista koostetaan interaktiivinen ja ominaisuuksiltaan rikas, digitaalinen tarkastuslista, jonka avulla työntekijät voivat ilmoittaa työnjohdolle ja muille tahoille mahdollisista virheistä ja/tai ongelmista.</p>
                         <div class="space"></div>
-
+                        <p>Ja koska kyseessä on pilvipalvelu, Laatua pitää huolen kaikista ylläpidollisista asioista. Niin tietoturvasta, kuluvalvonnasta kuin ongelmanratkonnastakin. Asiakas voi itse päättää, minkälaisia ominaisuuksia tilattavaan palveluun liitetään. Ja, luonnollisesti, palvelua voi käyttää missä tahansa ja lähes millä tahansa laitteella!</p>
 
 
                     </div>
