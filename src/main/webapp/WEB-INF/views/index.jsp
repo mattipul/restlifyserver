@@ -239,7 +239,7 @@
                         <p>Ja koska kyseessä on pilvipalvelu, Laatua pitää huolen kaikista ylläpidollisista asioista. Niin tietoturvasta, kuluvalvonnasta kuin ongelmanratkonnastakin. Asiakas voi itse päättää, minkälaisia ominaisuuksia tilattavaan palveluun liitetään. Ja, luonnollisesti, palvelua voi käyttää missä tahansa ja lähes millä tahansa laitteella! Hinta määräytyy käytön mukaan.</p>
                         <div class="space"></div>
                         <a href="/otayhteytta" class="button-blue">Ota yhteyttä!</a> 
-
+                        
                     </div>
 
 
@@ -269,7 +269,10 @@
 
 
                         <!-- Title --> 
-
+                        <h2>yhteydenotot[at]laatua.net</h2>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
                         <p class="copyright">Showpage is a free app landing page made by <a href="http://www.iamsupview.be/">Supview</a>
 
                             <!-- Logo --> 
