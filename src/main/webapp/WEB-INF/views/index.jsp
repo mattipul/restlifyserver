@@ -144,7 +144,7 @@
 
                         <p>Kehitys tarvitsee tuekseen dataa, tilastoja ja informaatiota.</p><br>
                         <p>Laatua tarjoaa palvelun, joka mahdollistaa käytännöllisen suhtautumisen virheisiin ja juuri nihin ongelmiin, jotka hidastavat kehitystä ja tuotantoa.</p><br>
-                        <p>Nykyaikana jokainen yritys voi datamassojen avulla löytää uutta kasvua ja tehostaa toimintaansa!</p>
+                        <p>Nykyaikana jokainen yritys voi datamassojen avulla löytää uutta kasvua ja tehostaa toimintaansa! </p>
 
                         <div class="space"></div>
 
@@ -201,6 +201,7 @@
                         <!-- Content --> 
 
                         <p>Ajatuksena on se, että jokainen prosessi ja toimenpide jaetaan työvaiheisiin, joita käydään järjestelmällisesti läpi - yksi kerrallaan. Näistä työvaihelistoista koostetaan interaktiivinen ja ominaisuuksiltaan rikas, digitaalinen tarkastuslista, jonka avulla työntekijät voivat ilmoittaa työnjohdolle ja muille tahoille mahdollisista virheistä ja/tai ongelmista.</p>
+                        <p>Vastaavasti työnjohto voi seurata töiden valmistumista ja helpottaa suorittavan työn tekijöitä työssään.</p>
                         <div class="space"></div>
                         
                     </div>
