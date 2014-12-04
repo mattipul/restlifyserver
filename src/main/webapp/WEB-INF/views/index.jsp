@@ -143,7 +143,7 @@
                         <!-- Content --> 
 
                         <p>Kehitys tarvitsee tuekseen dataa, tilastoja ja informaatiota.</p><br>
-                        <p>Laatua tarjoaa palvelun, joka mahdollistaa käytännöllisen suhtautumisen virheisiin ja juuri nihin ongelmiin, jotka hidastavat kehitystä ja tuotantoa.</p><br>
+                        <p>Laatua tarjoaa palvelun, joka mahdollistaa käytännöllisen suhtautumisen virheisiin ja juuri niihin ongelmiin, jotka hidastavat kehitystä ja tuotantoa.</p><br>
                         <p>Nykyaikana jokainen yritys voi datamassojen avulla löytää uutta kasvua ja tehostaa toimintaansa! </p>
 
                         <div class="space"></div>
