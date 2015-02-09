@@ -1,3 +1,13 @@
-mk/profiles/DevProfile.class
+mk/auth/JpaAuthenticationProvider$1.class
+mk/service/RestlifyService.class
 mk/profiles/ProdProfile.class
 mk/Application.class
+mk/domain/RESTObject.class
+mk/domain/RESTClass.class
+mk/controller/RestlifyRepositoryController.class
+mk/repository/RESTClassRepository.class
+mk/domain/RESTAttribute.class
+mk/auth/JpaAuthenticationProvider$2.class
+mk/repository/RESTAttributeRepository.class
+mk/repository/RESTObjectRepository.class
+mk/profiles/DevProfile.class

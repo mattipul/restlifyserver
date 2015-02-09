@@ -1,4 +1,11 @@
-/home/mattipul/NetBeansProjects/Inwitter/src/main/java/mk/profiles/ProdProfile.java
-/home/mattipul/NetBeansProjects/Inwitter/src/main/java/mk/controller/DefaultController.java
-/home/mattipul/NetBeansProjects/Inwitter/src/main/java/mk/profiles/DevProfile.java
-/home/mattipul/NetBeansProjects/Inwitter/src/main/java/mk/Application.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/controller/RestlifyRepositoryController.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/profiles/ProdProfile.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/service/RestlifyService.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/profiles/DevProfile.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/repository/RESTAttributeRepository.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/repository/RESTObjectRepository.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/domain/RESTObject.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/domain/RESTClass.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/repository/RESTClassRepository.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/Application.java
+/home/mattipul/NetBeansProjects/RestlifyServer/src/main/java/mk/domain/RESTAttribute.java

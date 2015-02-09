@@ -1,56 +1,44 @@
 package mk.controller;
 
-import mk.domain.Entry;
-import mk.repository.EntryRepository;
+import mk.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class DefaultController {
     
     @Autowired
-    private EntryRepository entryRepository;
+    private MemberService memebrService;
     
     @RequestMapping(value="/", method=RequestMethod.GET)
+    @ResponseBody
     public String root(){
-        return "/WEB-INF/views/index.jsp";
+        return "";
     }
     
-    @RequestMapping(value="/otayhteytta", method=RequestMethod.GET)
-    public String rek(){
-        return "/WEB-INF/views/otayhteytta.jsp";
+    @RequestMapping(value="/register", method=RequestMethod.POST)
+    @ResponseBody
+    public String register(@RequestParam String username, 
+            @RequestParam String password1,
+            @RequestParam String password2,
+            @RequestParam String email){
+        return this.memebrService.register(username, password1, password2, email);
     }
     
-    @RequestMapping(value="/ok", method=RequestMethod.GET)
-    public String ok(){
-        return "/WEB-INF/views/ok.jsp";
+    @RequestMapping(value="/login", method=RequestMethod.GET)
+    @ResponseBody
+    public String login(){
+        return "Authenticated?";
     }
     
-    @RequestMapping(value="/rek", method=RequestMethod.POST)
-    public String submit(@RequestParam String yritys,
-            @RequestParam String osoite,
-            @RequestParam String kaupunki,
-            @RequestParam String postinumero,
-            @RequestParam String maa,
-            @RequestParam String puhelinnumero,
-            @RequestParam String sahkopostiosoite,
-            @RequestParam String viesti){
-        
-        Entry e=new Entry();
-        e.setKaupunki(kaupunki);
-        e.setMaa(maa);
-        e.setOsoite(osoite);
-        e.setPostinumero(postinumero);
-        e.setPuhelinnumero(puhelinnumero);
-        e.setSahkopostiosoite(sahkopostiosoite);
-        e.setViesti(viesti);
-        e.setYritys(yritys);
-        this.entryRepository.save(e);
-        
-        return "redirect:/ok";
+    @RequestMapping(value="/logout", method=RequestMethod.GET)
+    @ResponseBody
+    public String logout(){
+        return "Logged out.";
     }
     
 }
