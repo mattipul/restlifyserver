@@ -25,7 +25,7 @@ public class MemberService {
 
     public String register(String username, String password1, String password2, String email) {
         Member m=new Member();
-        if(password1.equals(password2)){
+        if(password1.equals(password2) && password1.length()>6){
             if(this.memberRepository.findByUsername(username)==null){
                 m.setUsername(username);
                 m.setPassword(password1);
