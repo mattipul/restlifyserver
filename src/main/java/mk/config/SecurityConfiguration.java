@@ -20,7 +20,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/register").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/*").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/*/*").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/*/*/*").permitAll()
                 .anyRequest().authenticated();
 
         http.formLogin()

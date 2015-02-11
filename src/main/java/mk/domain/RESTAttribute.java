@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -26,9 +26,19 @@ public class RESTAttribute  implements Serializable {
     
     @OneToOne
     private RESTObject joinObj;
+
+    private String listPrimObjects;
     
-    @OneToMany
+    @ManyToMany
     private List<RESTObject> listObjects;
+
+    public String getListPrimObjects() {
+        return listPrimObjects;
+    }
+
+    public void setListPrimObjects(String listPrimObjects) {
+        this.listPrimObjects = listPrimObjects;
+    }
 
     public boolean isList() {
         return list;
