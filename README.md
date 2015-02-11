@@ -1,2 +1,0 @@
-# restlifyserver
-RESTlify Server
