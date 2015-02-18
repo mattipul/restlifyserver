@@ -1,11 +1,12 @@
 package mk.domain;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class RESTJoin  implements Serializable {
@@ -14,11 +15,22 @@ public class RESTJoin  implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    @OneToOne
+    @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+    private RESTObject parentObj;
+    
+    @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     private RESTAttribute attr;
     
-    @OneToOne
+    @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     private RESTObject joinedObj;
+
+    public RESTObject getParentObj() {
+        return parentObj;
+    }
+
+    public void setParentObj(RESTObject parentObj) {
+        this.parentObj = parentObj;
+    }
 
     public Long getId() {
         return id;

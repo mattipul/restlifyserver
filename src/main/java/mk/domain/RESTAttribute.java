@@ -2,12 +2,13 @@ package mk.domain;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class RESTAttribute  implements Serializable {
@@ -24,12 +25,12 @@ public class RESTAttribute  implements Serializable {
     
     private boolean list;
     
-    @OneToOne
+    @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     private RESTObject joinObj;
 
     private String listPrimObjects;
     
-    @ManyToMany
+    @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     private List<RESTObject> listObjects;
 
     public String getListPrimObjects() {

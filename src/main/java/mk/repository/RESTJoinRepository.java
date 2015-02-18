@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RESTJoinRepository extends JpaRepository<RESTJoin, Long> {
     List<RESTJoin> findByJoinedObj(RESTObject childObj);
+    List<RESTJoin> findByParentObj(RESTObject parentObj);
 }

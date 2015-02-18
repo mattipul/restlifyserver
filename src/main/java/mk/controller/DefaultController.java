@@ -23,16 +23,23 @@ public class DefaultController {
     @RequestMapping(value="/register", method=RequestMethod.POST)
     @ResponseBody
     public String register(@RequestParam String username, 
-            @RequestParam String password1,
-            @RequestParam String password2,
+            @RequestParam String password,
+            @RequestParam String passwordagain,
             @RequestParam String email){
-        return this.memebrService.register(username, password1, password2, email);
+        return this.memebrService.register(username, password, passwordagain, email);
     }
     
-    @RequestMapping(value="/login", method=RequestMethod.GET)
+    @RequestMapping(value="/change_password", method=RequestMethod.POST)
+    @ResponseBody
+    public String changePassword(@RequestParam String password,
+            @RequestParam String passwordagain){
+        return this.memebrService.changePassword( password, passwordagain);
+    }
+    
+    @RequestMapping(value="/login", method=RequestMethod.GET, produces="application/json")
     @ResponseBody
     public String login(){
-        return "Authenticated?";
+        return "{\"success\":0,\"errorMessage\":\"Not authenticated.\"}";
     }
     
     @RequestMapping(value="/logout", method=RequestMethod.GET)

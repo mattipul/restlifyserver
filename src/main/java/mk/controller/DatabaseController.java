@@ -15,10 +15,16 @@ public class DatabaseController {
     @Autowired
     private DatabaseService databaseService;
     
-    @RequestMapping(value="/create_database", method=RequestMethod.GET)
+    @RequestMapping(value="/create_database", method=RequestMethod.GET, produces="application/json")
     @ResponseBody
     public String createDatabase(){
         return this.databaseService.createDatabase();
+    }
+    
+    @RequestMapping(value="/drop_database/{apikey}", method=RequestMethod.DELETE, produces="application/json")
+    @ResponseBody
+    public String dropDatabase(@PathVariable String apikey){
+        return this.databaseService.dropDatabase(apikey);
     }
     
     @RequestMapping(value="/get_databases", method=RequestMethod.GET, produces="application/json")
@@ -30,14 +36,13 @@ public class DatabaseController {
     @RequestMapping(value="/define_class/{apikey}", method=RequestMethod.POST, consumes="application/json", produces="application/json")
     @ResponseBody
     public String defineClass(@PathVariable String apikey, @RequestBody String classJSON){
-        return this.databaseService.defineClass(apikey, classJSON);
+        return this.databaseService.define(apikey, classJSON);
     }
     
-    @RequestMapping(value="/destroy_class/{apikey}/{classname}", method=RequestMethod.DELETE)
+    @RequestMapping(value="/destroy_class/{apikey}/{classname}", method=RequestMethod.DELETE, produces="application/json")
     @ResponseBody
-    public int destroyClass(@PathVariable String apikey, @PathVariable String classname){
-        this.databaseService.destroyClass(apikey, classname.toLowerCase());
-        return 1;
+    public String destroyClass(@PathVariable String apikey, @PathVariable String classname){
+        return this.databaseService.destroyClass(apikey, classname.toLowerCase());
     }
     
     @RequestMapping(value="/get_classes/{apikey}", method=RequestMethod.GET, produces="application/json")

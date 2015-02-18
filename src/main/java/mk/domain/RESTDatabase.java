@@ -18,7 +18,7 @@ public class RESTDatabase implements Serializable {
     
     private String owner;
     
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<RESTClass> classes;
     
     private String apiKey;
