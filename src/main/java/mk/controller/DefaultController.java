@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,12 @@ public class DefaultController {
     @RequestMapping(value="/", method=RequestMethod.GET)
     public String root(){
         return "/WEB-INF/views/index.jsp";
+    }
+    
+    @RequestMapping(value="/error", method=RequestMethod.GET, produces="application/json")
+    @ResponseBody
+    public String error(@RequestBody String db){
+        return "{\"error\":1}";
     }
 
     @RequestMapping(value="/ok", method=RequestMethod.GET, produces="application/json")
