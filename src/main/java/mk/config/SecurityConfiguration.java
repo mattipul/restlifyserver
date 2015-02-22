@@ -18,6 +18,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.authorizeRequests()
+                .antMatchers("/").permitAll()
+                .antMatchers("/res").permitAll()
+                .antMatchers("/res/*").permitAll()
+                .antMatchers("/res/favicon.png").permitAll()
+                .antMatchers("/res/restlify.js").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/*").permitAll()
@@ -28,14 +33,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.formLogin()
                 .loginPage("/login")
                 .loginProcessingUrl("/authenticate")
-                .defaultSuccessUrl("/")
+                .defaultSuccessUrl("/ok")
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .permitAll();
 
         http.logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/loggedout")
                 .permitAll()
                 .invalidateHttpSession(true);
         

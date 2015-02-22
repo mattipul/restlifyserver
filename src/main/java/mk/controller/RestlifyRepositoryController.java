@@ -5,7 +5,7 @@ import mk.service.DatabaseService;
 import mk.service.RestlifyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,25 +22,14 @@ public class RestlifyRepositoryController {
     @Autowired
     private DatabaseService databaseService;
 
-    @RequestMapping()
-    @ResponseBody
-    public String defaultMethod() {
-        return "";
-    }
-
     //MUISTA PRIMITIIVIEN LISTAT
     @RequestMapping(value = "/api/{apikey}", method = RequestMethod.GET, produces = "application/json")
-    @ResponseBody
-    public String getStructure(@PathVariable String apikey) {
-        String ret = this.databaseService.getDatabaseStructure(apikey);
-        if (ret.length() > 2) {
-            return ret;
-        } else {
-            return ret;
-        }
+    public String getStructure(Model model, @PathVariable String apikey) {
+        model.addAttribute("db", this.databaseService.getDatabaseStructureList(apikey));
+        return "/WEB-INF/views/api.jsp";
     }
 
-    @RequestMapping(value = "/api/{apikey}/{classname}s", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/api/{apikey}/{classname}", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public String getAll(@PathVariable String apikey, @PathVariable String classname, @RequestParam Map<String, String> params) {
         String ret = this.restlifyService.getAll(apikey, classname.toLowerCase(), params);
@@ -51,7 +40,7 @@ public class RestlifyRepositoryController {
         }
     }
 
-    @RequestMapping(value = "/api/{apikey}/{classname}s/{id}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/api/{apikey}/{classname}/{id}", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public String get(@PathVariable String apikey, @PathVariable String classname, @PathVariable Long id) {
         String ret = this.restlifyService.get(apikey, classname.toLowerCase(), id);
@@ -62,7 +51,7 @@ public class RestlifyRepositoryController {
         }
     }
 
-    @RequestMapping(value = "/api/{apikey}/{classname}s/{id}", method = RequestMethod.DELETE, produces = "application/json")
+    @RequestMapping(value = "/api/{apikey}/{classname}/{id}", method = RequestMethod.DELETE, produces = "application/json")
     @ResponseBody
     public String delete(@PathVariable String apikey, @PathVariable String classname, @PathVariable Long id) {
         String ret = this.restlifyService.delete(apikey, classname.toLowerCase(), id);
@@ -73,7 +62,7 @@ public class RestlifyRepositoryController {
         }
     }
 
-    @RequestMapping(value = "/api/{apikey}/{classname}s", method = RequestMethod.POST, produces = "application/json")
+    @RequestMapping(value = "/api/{apikey}/{classname}", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public String save(@PathVariable String apikey, @PathVariable String classname, @RequestBody String body) {
         String ret = this.restlifyService.save(apikey, classname.toLowerCase(), body);

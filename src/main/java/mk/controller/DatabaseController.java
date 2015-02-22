@@ -15,10 +15,10 @@ public class DatabaseController {
     @Autowired
     private DatabaseService databaseService;
     
-    @RequestMapping(value="/create_database", method=RequestMethod.GET, produces="application/json")
+    @RequestMapping(value="/create_database", method=RequestMethod.POST, produces="application/json")
     @ResponseBody
-    public String createDatabase(){
-        return this.databaseService.createDatabase();
+    public String createDatabase(@RequestBody String db){
+        return this.databaseService.createDatabase(db);
     }
     
     @RequestMapping(value="/drop_database/{apikey}", method=RequestMethod.DELETE, produces="application/json")

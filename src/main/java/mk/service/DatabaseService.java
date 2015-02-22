@@ -198,22 +198,35 @@ public class DatabaseService {
     }
 
     @Transactional
-    public String createDatabase() {
+    public String createDatabase(String dbJSON) {
         if (this.memberService.isAuthenticated()) {
             while (true) {
                 String apikey = UUID.randomUUID().toString().substring(0, 5);
                 if (this.restDatabaseRepository.findByApiKey(apikey) == null) {
-                    RESTDatabase restDatabase = new RESTDatabase();
-                    restDatabase.setApiKey(apikey);
-                    Member m = this.memberService.getAuthenticatedPerson();
-                    restDatabase.setOwner(m.getUsername());
-                    this.restDatabaseRepository.save(restDatabase);
-                    return "{\"apiKey\":\"" + apikey + "\"}";
+                    JsonElement jsel = new JsonParser().parse(dbJSON);
+                    if(jsel.isJsonObject()){
+                        JsonObject jsonObj=jsel.getAsJsonObject();
+                        if(jsonObj.has("name") && jsonObj.has("description")){
+                            String name=jsonObj.get("name").getAsString();
+                            String desc=jsonObj.get("description").getAsString();
+                            RESTDatabase restDatabase = new RESTDatabase();
+                            restDatabase.setApiKey(apikey);
+                            restDatabase.setName(name);
+                            restDatabase.setDescription(desc);
+                            Member m = this.memberService.getAuthenticatedPerson();
+                            restDatabase.setOwner(m.getUsername());
+                            this.restDatabaseRepository.save(restDatabase);
+                            return "{\"apiKey\":\"" + apikey + "\"}";
+                        }else{
+                            break;
+                        }
+                    }else{
+                        break;
+                    }
                 }
             }
-        } else {
-            return "{\"success\":0}";
-        }
+        } 
+        return "{\"success\":0}";     
     }
 
     public String classToJSON(RESTClass cls) {
@@ -313,6 +326,11 @@ public class DatabaseService {
             }
         }
         return "[" + json + "]";
+    }
+
+    public RESTDatabase getDatabaseStructureList(String apikey) {
+        RESTDatabase restDB = this.restDatabaseRepository.findByApiKey(apikey);
+        return restDB;
     }
 
 }
