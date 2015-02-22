@@ -144,7 +144,7 @@
                                 <small>A cloud storage and a RESTful Web Service in the same package.</small>
                             </h2><hr/>
                             <h3>- Sign Up <small>It's free, and it takes about a second.</small></h3>
-                            <h3>- Create a database <small>Download the client.</small></h3>
+                            <h3>- Create a database <small>Take a look at the API documentation.</small></h3>
                             <h3>- Define its structure <small>Define individual classes or a whole array of them.</small></h3>
                             <h3>- Start opening your data <small>Import stuff and publish it!</small></h3><hr/>
                         </div>
