@@ -56,8 +56,8 @@
                 <div class="panel panel-info">
                   <div class="panel-heading">API-key: ${db.apiKey}</div>
                   <div class="panel-body">
-                      <b>${db.name}</b><hr/>
-                        ${db.description}
+                      <b><c:out value="${db.name}"/></b><hr/>
+                        <c:out value="${db.description}"/>
                   </div>
                 </div>
      </div>
