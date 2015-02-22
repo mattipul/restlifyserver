@@ -125,6 +125,7 @@ public class RestlifyService {
     public String getAll(String apikey, String classname, Map<String, String> params) {
         String json = "[";
         List<RESTObject> apiobjs = this.search(apikey, classname, params);
+        String jsonTest=(new Gson()).toJson(apiobjs);
         for (int i = 0; i < apiobjs.size(); i++) {
             RESTObject obj = apiobjs.get(i);
             Gson gson = new Gson();
@@ -142,8 +143,9 @@ public class RestlifyService {
 
     @Transactional
     public String get(String apikey, String classname, Long id) {
-        String json = "{}";
+        String json = "{}";       
         RESTObject apiobj = this.restObjectRepository.findByApiKeyAndClassNameAndClassID(apikey, classname, id);
+        String jsonTest=(new Gson()).toJson(apiobj);
         if (apiobj != null) {
             Gson gson = new Gson();
             HashMap<String, Object> objMap = this.restObjectToJSON(apiobj, apikey);
