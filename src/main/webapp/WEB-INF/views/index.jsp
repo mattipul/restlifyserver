@@ -183,7 +183,7 @@
                                         <p>Creating a database is a simple task. Use a HTTP-client to authenticate yourself, and then send a POST-request to /create_database. Take a look at the API-documentation below. If everything goes well, the service will return an API-key for you.</p>
                                         <p>You can use this API-key to define classes. This is propably the most important step you will need to take. The API-documentation below describes how a class is defined as JSON-object. A class has a name and a right amount of attributes. Attributes have a key and a type. And they can be lists or single objects(references to other classes) or primitives. It is propably wise to define the whole database once as an array of class defining objects.</p>
                                         <p>After you finally manage to define the database structure, you can start updating and consuming the database via RESTful web service that are generated for every database automatically.</p>
-                                        <p>All web services are located at https://restlify.com/api/{apiKey}. <b>GET-requests can be made without any authentication.</b>
+                                        <p>All web services are located at http://restlify.com/api/{apiKey}. <b>GET-requests can be made without any authentication.</b>
                                 </div>
             </div>
 
