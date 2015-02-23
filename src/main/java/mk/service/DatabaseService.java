@@ -51,6 +51,9 @@ public class DatabaseService {
 
     public boolean valid(String str) {
         String valids = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_";
+        if(str.length()==0){
+            return false;
+        }
         for (int i = 0; i < str.length(); i++) {
             if (!valids.contains("" + str.charAt(i))) {
                 return false;
@@ -162,7 +165,7 @@ public class DatabaseService {
                                                     String attrKey = attrObj.get("key").getAsString().toLowerCase();
                                                     String attrType = attrObj.get("type").getAsString().toLowerCase();
                                                     boolean attrList = attrObj.get("list").getAsBoolean();
-                                                    if (this.valid(attrKey) && this.valid(attrType)) {
+                                                    if (this.valid(attrKey) && this.valid(attrType) && !attrKey.equals("id")) {
                                                         RESTAttributeDefinition attrDef = new RESTAttributeDefinition();
                                                         attrDef.setKey(attrKey);
                                                         attrDef.setType(attrType);
