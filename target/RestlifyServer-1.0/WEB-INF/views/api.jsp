@@ -69,11 +69,11 @@
                 <div class="panel panel-info">
                   <div class="panel-heading" style="text-transform: capitalize">${def.className}</div>
                   <div class="panel-body">
-                        <span class="label label-success">GET</span> <a href="">/${db.apiKey}/${def.className}</a><br/><br/>
-                        <span class="label label-success">GET</span> <a href="">/${db.apiKey}/${def.className}/{id}</a><br/><br/>
-                        <span class="label label-success">GET</span> <a href="">/${db.apiKey}/${def.className}?{searchAttribute}={searchValue}</a><br/><br/>
-                        <span class="label label-warning">POST</span> <a href="">/${db.apiKey}/${def.className}</a> <br/><br/>
-                        <span class="label label-danger">DELETE</span> <a href="">/${db.apiKey}/${def.className}/{id}</a>
+                        <span class="label label-success">GET</span> <a href="">/${def.className}</a><br/><br/>
+                        <span class="label label-success">GET</span> <a href="">/${def.className}/{id}</a><br/><br/>
+                        <span class="label label-success">GET</span> <a href="">/${def.className}?{searchAttribute}={searchValue}</a><br/><br/>
+                        <span class="label label-warning">POST</span> <a href="">/${def.className}</a> <br/><br/>
+                        <span class="label label-danger">DELETE</span> <a href="">/${def.className}/{id}</a>
                   </div>
                 </div>
             </c:forEach>
