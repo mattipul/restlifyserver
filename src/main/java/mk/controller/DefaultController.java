@@ -23,11 +23,11 @@ public class DefaultController {
         return "/WEB-INF/views/index.jsp";
     }
     
-    @RequestMapping(value="/error", method=RequestMethod.GET, produces="application/json")
+    /*@RequestMapping(value="/error", method=RequestMethod.GET, produces="application/json")
     @ResponseBody
     public String error(@RequestBody String db){
         return "{\"error\":1}";
-    }
+    }*/
 
     @RequestMapping(value="/ok", method=RequestMethod.GET, produces="application/json")
     @ResponseBody
