@@ -193,20 +193,23 @@
                      <pre class="prettify">
      <b>Authenticate (login information as POST-parameters)</b>
      POST /authenticate HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
      username=yourUsername&password=yourPassword
                      </pre>
 
                      <pre class="prettify">
      <b>Log Out (AUTHENTICATION REQUIRED)</b>
      GET /logout HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
                      </pre>
 
                      <pre class="prettify">
      <b>Create a database (body in JSON-format) (AUTHENTICATION REQUIRED)</b>
      POST /create_database HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
      {
         "name":"databaseName", 
         "description":"databaseDescription"
@@ -217,14 +220,16 @@
                      <pre class="prettify">
      <b>List databases (AUTHENTICATION REQUIRED)</b>
      GET /get_databases HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
      <i>RETURNS API-key list in JSON-format: ["{apiKey1}", "{apiKey2}", ...]</i>
                      </pre>
 
                      <pre class="prettify">
      <b>Define a class (body in JSON-format) (AUTHENTICATION REQUIRED)</b>
      POST /define_class/{apiKey} HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
      {
          "name":"className",
          "attributes":[
@@ -238,7 +243,8 @@
                      <pre class="prettify">
      <b>Define an array of classes (body in JSON-format) (AUTHENTICATION REQUIRED)</b>
      POST /define_class/{apiKey} HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
      [
          {
              "name":"className",
@@ -257,7 +263,8 @@
                      <pre class="prettify">
      <b>Get all class definitions (AUTHENTICATION REQUIRED)</b>
      POST /get_classes/{apiKey} HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
      <i>RETURNS a list of class definitions in JSON-format</i>
                      </pre>
 
@@ -265,14 +272,16 @@
                      <pre class="prettify">
      <b>Get a class definition (AUTHENTICATION REQUIRED)</b>
      POST /get_class/{apiKey}/{className} HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
      <i>RETURNS a class definition in JSON-format</i>
                      </pre>
 
                      <pre class="prettify">
      <b>Destroy a class (AUTHENTICATION REQUIRED)</b>
      DELETE /destroy_class/{apiKey}/{className} HTTP/1.1
-     HOST: http://www.restlify.com
+     HOST A: http://www.restlify.com
+     HOST B: https://secure.restlify.com
      <b>DELETES EVERY SINGLE INSTANCE OF THAT CLASS</b>
                      </pre>
 
