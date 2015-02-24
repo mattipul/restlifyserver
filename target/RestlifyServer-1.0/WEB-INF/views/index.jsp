@@ -12,11 +12,11 @@
         <title>RESTlify</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Public, RESTful Data Repository in the Cloud. We offer the platform, you can offer the data." />
+        <meta name="description" content="Public, RESTful Data Repositories in the Cloud. We offer the platform, you can offer the data." />
         <meta name="keywords" content="REST, Cloud, Web service, service, SOA, JSON, RESTful, Restlify, api, database">
         <meta name="author" content="restlify">
         <meta property="og:title" content="RESTlify" />
-        <meta property="og:description" content="Public, RESTful Data Repository in the Cloud. We offer the platform, you can offer the data." />
+        <meta property="og:description" content="Public, RESTful Data Repositories in the Cloud. We offer the platform, you can offer the data." />
         <meta property="og:url" content="http://restlify.com/" />
         <meta property="article:published_time" content="2015-01-13" />
         <meta property="article:modified_time" content="2015-01-24" />
