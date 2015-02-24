@@ -69,6 +69,9 @@
                 <div class="panel panel-info">
                   <div class="panel-heading" style="text-transform: capitalize">${def.className}</div>
                   <div class="panel-body">
+                        <c:forEach items="${def.attributes}" var="attr">
+                            <p><span class="label label-default">${attr.key}</span>:<span class="label label-default">${attr.type}</span></p>
+                        </c:forEach>
                         <hr/>
                         <span class="label label-success">GET</span> <a href="">http://www.restlify.com/api/${db.apiKey}/${def.className}</a><br/><br/>
                         <span class="label label-success">GET</span> <a href="">http://www.restlify.com/api/${db.apiKey}/${def.className}/{id}</a><br/><br/>
