@@ -28,16 +28,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/api/*").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/*/*").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/*/*/*").permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().authenticated().and().httpBasic();
+        
+        //http.
 
-        http.formLogin()
+        /*http.formLogin()
                 .loginPage("/login")
                 .loginProcessingUrl("/authenticate")
                 .defaultSuccessUrl("/ok")
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .permitAll();
-
+                */
         http.logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/loggedout")
