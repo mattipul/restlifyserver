@@ -13,6 +13,19 @@ public class MemberService {
 
     @Autowired
     private MemberRepository memberRepository;
+    
+    public boolean valid(String str) {
+        String valids = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_";
+        if(str.length()==0){
+            return false;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            if (!valids.contains("" + str.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public Member getAuthenticatedPerson() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -29,14 +42,18 @@ public class MemberService {
             if (password1.equals(password2)) {
                 if (password1.length() > 6) {
                     if (this.memberRepository.findByUsername(username) == null) {
-                        m.setUsername(username);
-                        m.setPassword(password1);
-                        m.setRole("member");
-                        m.setEmail(email);
-                        this.memberRepository.save(m);
-                        return "{\"success\":1}";
+                        if(valid(username) && valid(password1)){
+                            m.setUsername(username);
+                            m.setPassword(password1);
+                            m.setRole("member");
+                            m.setEmail(email);
+                            this.memberRepository.save(m);
+                            return "{\"success\":1}";
+                        }else{
+                            return "{\"success\":0, \"errorMessage\":\"Odd characters.\"}";                  
+                        }
                     }else{
-                        return "{\"success\":0, \"errorMessage\":\"Username exists already..\"}";
+                        return "{\"success\":0, \"errorMessage\":\"Username exists already.\"}";
                     }
                 }else{
                     return "{\"success\":0, \"errorMessage\":\"Min. password length 7 characters.\"}";
