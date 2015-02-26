@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>RESTlify - API Documentation</title>
+        <title>RESTlify - ${db.name} - API Documentation</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/res/favicon.png" />
         <!-- Bootstrap core CSS -->
