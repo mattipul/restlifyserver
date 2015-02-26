@@ -31,7 +31,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-default navbar-xs" role="navigation">
+        <nav class="navbar navbar-inverse navbar-xs" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -61,7 +61,7 @@
                         <span class='st__large' displayText=''></span>
                         <span class='st_linkedin_large' displayText='LinkedIn'></span>
                         <span class='st_email_large' displayText='Email'></span>
-            <div class="panel panel-info">
+            <div class="panel panel-default">
                 <div class="panel-heading">API-key: ${db.apiKey}</div>
                 <div class="panel-body">
                     <b><c:out value="${db.name}"/></b><hr/>
@@ -74,7 +74,7 @@
 
         <div class="container">
             <c:forEach items="${db.classes}" var="def">
-                <div class="panel panel-info">
+                <div class="panel panel-default">
                     <div class="panel-heading" style="text-transform: capitalize">${def.className}</div>
                     <div class="panel-body">
                         <p>Attributes:</p>
