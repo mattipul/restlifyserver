@@ -191,7 +191,7 @@ public class RestlifyService {
             List<RESTAttribute> attrs = new ArrayList<>();
             for (RESTAttributeDefinition attrDef : cls.getAttributes()) {
                 RESTAttribute attr = new RESTAttribute();              
-                if (jsobj.has(attrDef.getKey())) {
+                if (jsobj.has(attrDef.getKey().toLowerCase())) {
                     String attrType = attrDef.getType();
 
                     if (attrType.equals("int")
