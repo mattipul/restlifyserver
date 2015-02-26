@@ -56,6 +56,7 @@
 
 
         <div style="padding-top:0px;" class="container">
+            <span class='st_sharethis_large' displayText='ShareThis'></span>
             <span class='st_facebook_large' displayText='Facebook'></span>
                         <span class='st_twitter_large' displayText='Tweet'></span>
                         <span class='st__large' displayText=''></span>
