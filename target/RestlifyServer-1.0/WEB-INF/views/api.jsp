@@ -82,17 +82,12 @@
                             <p><span class="label label-default">${attr.key}</span>:<span class="label label-default">${attr.type}</span></p>
                             </c:forEach>
                         <hr/>
-                        <span class="label label-success">GET</span> <a href="">http://www.restlify.com/api/${db.apiKey}/${def.className}</a><br/><br/>
-                        <span class="label label-success">GET</span> <a href="">http://www.restlify.com/api/${db.apiKey}/${def.className}/{id}</a><br/><br/>
-                        <span class="label label-success">GET</span> <a href="">http://www.restlify.com/api/${db.apiKey}/${def.className}?{searchAttribute}={searchValue}</a> <br/><br/>
-                        <span class="label label-warning">POST</span> <a href="">http://www.restlify.com/api/${db.apiKey}/${def.className}</a> <i>(BASIC AUTH)</i><br/><br/>
-                        <span class="label label-danger">DELETE</span> <a href="">http://www.restlify.com/api/${db.apiKey}/${def.className}/{id}</a> <i>(BASIC AUTH)</i><br/><br/>
-                        <hr/>
-                        <span class="label label-success">GET</span> <a href="">https://secure.restlify.com/api/${db.apiKey}/${def.className}</a><br/><br/>
-                        <span class="label label-success">GET</span> <a href="">https://secure.restlify.com/api/${db.apiKey}/${def.className}/{id}</a><br/><br/>
-                        <span class="label label-success">GET</span> <a href="">https://secure.restlify.com/api/${db.apiKey}/${def.className}?{searchAttribute}={searchValue}</a><br/><br/>
-                        <span class="label label-warning">POST</span> <a href="">https://secure.restlify.com/api/${db.apiKey}/${def.className}</a>  <i>(BASIC AUTH)</i><br/><br/>
-                        <span class="label label-danger">DELETE</span> <a href="">https://secure.restlify.com/api/${db.apiKey}/${def.className}/{id}</a>  <i>(BASIC AUTH)</i>
+                        <span class="label label-success">GET</span> <a href="">https://www.restlify.com/api/${db.apiKey}/${def.className}</a><br/><br/>
+                        <span class="label label-success">GET</span> <a href="">https://www.restlify.com/api/${db.apiKey}/${def.className}/{id}</a><br/><br/>
+                        <span class="label label-success">GET</span> <a href="">https://www.restlify.com/api/${db.apiKey}/${def.className}?{searchAttribute}={searchValue}</a> <br/><br/>
+                        <span class="label label-warning">POST</span> <a href="">https://www.restlify.com/api/${db.apiKey}/${def.className}</a> <i>(BASIC AUTH)</i><br/><br/>
+                        <span class="label label-danger">DELETE</span> <a href="">https://www.restlify.com/api/${db.apiKey}/${def.className}/{id}</a> <i>(BASIC AUTH)</i><br/><br/>
+                        
 
                     </div>
                 </div>
