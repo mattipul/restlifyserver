@@ -20,10 +20,7 @@
           <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
           <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
         <![endif]-->
-        <script type="text/javascript">var switchTo5x = true;</script>
-        <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "133d52c7-30c5-46a8-8d29-514b6d0a8cc8", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-        <style>
+         <style>
             body{
                 background:rgb(250,250,250);
             }
@@ -56,12 +53,7 @@
 
 
         <div style="padding-top:0px;" class="container">
-            <span class='st_sharethis_large' displayText='ShareThis'></span>
-            <span class='st_facebook_large' displayText='Facebook'></span>
-                        <span class='st_twitter_large' displayText='Tweet'></span>
-                        <span class='st__large' displayText=''></span>
-                        <span class='st_linkedin_large' displayText='LinkedIn'></span>
-                        <span class='st_email_large' displayText='Email'></span>
+            
             <div class="panel panel-default">
                 <div class="panel-heading">API-key: ${db.apiKey}</div>
                 <div class="panel-body">
