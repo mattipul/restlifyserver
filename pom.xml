@@ -6,11 +6,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dbl</groupId>
-    <artifactId>RestlifyServer</artifactId>
+    <artifactId>RESTlify</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>RestlifyServer</name>
+    <name>RESTlify</name>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -64,7 +64,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -82,5 +88,5 @@
     <pluginRepositories>
         
     </pluginRepositories>
-    <description>RestlifyServer</description>
+    <description>RESTlify</description>
 </project>

@@ -15,46 +15,46 @@ public class DatabaseController {
     @Autowired
     private DatabaseService databaseService;
     
-    @RequestMapping(value="/create_database", method=RequestMethod.POST, produces="application/json")
-    @ResponseBody
-    public String createDatabase(@RequestBody String db){
-        return this.databaseService.createDatabase(db);
-    }
-    
-    @RequestMapping(value="/drop_database/{apikey}", method=RequestMethod.DELETE, produces="application/json")
-    @ResponseBody
-    public String dropDatabase(@PathVariable String apikey){
-        return this.databaseService.dropDatabase(apikey);
-    }
-    
     @RequestMapping(value="/get_databases", method=RequestMethod.GET, produces="application/json")
     @ResponseBody
     public String getDatabases(){
         return this.databaseService.getDatabases();
     }
     
-    @RequestMapping(value="/define_class/{apikey}", method=RequestMethod.POST, consumes="application/json", produces="application/json")
+    @RequestMapping(value="/create_database", method=RequestMethod.POST, produces="application/json", consumes="application/json")
     @ResponseBody
-    public String defineClass(@PathVariable String apikey, @RequestBody String classJSON){
-        return this.databaseService.define(apikey, classJSON);
+    public String createDatabase(@RequestBody String json){
+        return this.databaseService.createDatabase(json);
     }
     
-    @RequestMapping(value="/destroy_class/{apikey}/{classname}", method=RequestMethod.DELETE, produces="application/json")
+    @RequestMapping(value="/edit_database/{apiKey}", method=RequestMethod.POST, produces="application/json", consumes="application/json")
     @ResponseBody
-    public String destroyClass(@PathVariable String apikey, @PathVariable String classname){
-        return this.databaseService.destroyClass(apikey, classname.toLowerCase());
+    public String editDatabase(@PathVariable String apiKey, @RequestBody String json){
+        return this.databaseService.editDatabase(apiKey, json);
     }
     
-    @RequestMapping(value="/get_classes/{apikey}", method=RequestMethod.GET, produces="application/json")
+    @RequestMapping(value="/define_classes/{apiKey}", method=RequestMethod.POST, produces="application/json", consumes="application/json")
     @ResponseBody
-    public String getAllClasses(@PathVariable String apikey){
-        return this.databaseService.getAllClasses(apikey);
+    public String defineClasses(@PathVariable String apiKey, @RequestBody String json){
+        return this.databaseService.defineClasses(apiKey, json);
     }
     
-    @RequestMapping(value="/get_class/{apikey}/{classname}", method=RequestMethod.GET, produces="application/json")
+    @RequestMapping(value="/get_class/{apiKey}/{className}", method=RequestMethod.GET)
     @ResponseBody
-    public String getClass(@PathVariable String apikey, @PathVariable String classname){
-        return this.databaseService.getClass(apikey, classname.toLowerCase());
+    public String getClass(@PathVariable String apiKey, @PathVariable String className ){
+        return this.databaseService.getClass(apiKey, className);
+    }
+    
+    @RequestMapping(value="/get_classes/{apiKey}", method=RequestMethod.GET)
+    @ResponseBody
+    public String getClasses(@PathVariable String apiKey ){
+        return this.databaseService.getClasses(apiKey);
+    }
+    
+    @RequestMapping(value="/delete_class/{apiKey}/{className}", method=RequestMethod.DELETE)
+    @ResponseBody
+    public String deleteClass(@PathVariable String apiKey, @PathVariable String className ){
+        return this.databaseService.deleteClass(apiKey, className);
     }
     
 }
